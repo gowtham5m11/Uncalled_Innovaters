@@ -93,6 +93,31 @@
             margin-top: 12%;
             margin-left: 30%;
         }
+        .body .card .card__content .card-text p{
+            max-width: 500px;
+            position: absolute;
+            left: 22%;
+        }
+        .body .card .card__content .card-text{
+            align-items: center;
+            gap: 50px;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .paragraph {
+            flex: 1; /* Distribute available space equally among paragraphs */
+            padding-top: 69px; /* Add padding between paragraphs */
+        }
+        .card-logo{
+
+            position: absolute;
+            top: 150px ;
+            left: 220px;
+        }
+        .card-logo img{
+            width: 100%;
+            height: 100%;
+        }
     </style>
 </head>
 <body>
@@ -103,7 +128,7 @@
         <div class="header-items">
             <div class="header-item"><button onclick="redirect_home();">HOME</button></div>
             <div class="header-item"><button onclick="redirect_project();">projects</button></div>
-            <div class="header-item"><button onclick="redirect_help();">help</button></div>
+<!--             <div class="header-item"><button onclick="redirect_help();">help</button></div> -->
             <div class="header-item"><button onclick="redirect_about();">about</button></div>
             <div class="header-item"><button onclick="redirect_contact();">contact</button></div>
         </div>
@@ -111,8 +136,28 @@
     <div class="body">
         <div class="card">
             <div class="card__content">
+                <div class="card-logo">
+                    <img src="uncalled_innovators.jpg" alt="">
+                </div>
                 <div class="title"><h1>About us</h1>
-                <p>We aspire to give students hands on experience with the industries free of cost</p></div>
+                    <div class="card-text">
+                        <div class="paragraph">
+                            <p> Education should not be a luxury. uncalled innovators is committed to providing affordable and accessible educational resources so that anyone with a desire to learn can access the tools they need to succeed</p>
+                        </div>
+                        <div class="paragraph">
+                            <p> "In a rapidly changing world, hands-on experience is essential. UNCALLED INNOVATORS connects learners, offering a diverse range of practical knowlwdge that transcend borders and foster a deeper understanding of the world."</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>At UNCALLED INNOVATORS, we view practical experience as a communal experience. Our platform is designed to facilitate collaboration, discussion, and knowledge-sharing among learners, teachers, and experts. Together, we can learn and grow.</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Education is a dynamic field, and we are committed to continuous improvement. UNCALLED INNOVATORS regularly updates and enhances our content and features to stay at the forefront of educational innovation</p>
+                        </div>
+                        <div class="paragraph">
+                            <p>Join our thriving learning community, where you can engage and collaborate on projects with fellow learners and educators who share your passions."</p>
+                        </div>
+                    </div>
+            </div>
             </div>
         </div>
     </div>
