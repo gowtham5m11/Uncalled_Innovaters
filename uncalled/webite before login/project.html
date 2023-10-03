@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* Add your project page styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient( #66D3FA, #2e8b57);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            height: 25px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin-right: 70px;
+        }
+
+        .header-items {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-item button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header-item button:hover {
+            color: #00D4FF;
+        }
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px;
+        }
+
+        .project-card {
+            width: 300px;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px; /* Add margin between project cards */
+        }
+
+        .project-title {
+            color: #00D4FF;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .project-description {
+            color: #fff;
+            font-size: 16px;
+        }
+        .header .signup .signup-button {
+            background-color: transparent;
+            border: none;
+            color: aliceblue;
+            position: absolute;
+            font-size: larger;
+            text-align: center;
+            align-items: center;
+            right: 1%;
+            top: 6.2%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Uncalled Innovaters</h1>
+        </div>
+        <div class="header-items">
+            <div class="header-item"><button onclick="redirect_home();">HOME</button></div>
+            <div class="header-item"><button onclick="redirect_projects();">PROJECTS</button></div>
+            <!-- <div class="header-item"><button onclick="redirect_help();">help</button></div> -->
+            <div class="header-item"><button onclick="redirect_about();">ABOUT</button></div>
+            <div class="header-item"><button onclick="redirect_contact();">CONTACT</button></div>
+        </div>
+        <div class="signup">
+            <button type="button" class="signup-button" onclick="redirect_signup();">signup/login</button>
+        </div>
+    </header>
+    <div class="projects-container">
+        <div class="project-card">
+            <h2 class="project-title">Energy-Efficient HVAC System Design</h2>
+            <p class="project-description">Problem: High energy consumption in commercial buildings due to inefficient heating, ventilation, and air conditioning (HVAC) systems.
+            </p><P class="project-description" >Solution: Design and implement an energy-efficient HVAC system with smart controls to reduce energy usage and costs.</p>
+        </div>
+        <div class="project-card">
+            <h2 class="project-title">Waste Water Treatment Optimization</h2>
+            <p class="project-description">Problem: Inadequate wastewater treatment leading to environmental pollution.</p>
+                <p class="project-description">Solution: Develop an optimized wastewater treatment process that removes contaminants effectively and meets environmental regulations.</p>
+        </div>
+        <div class="project-card">
+            <h2 class="project-title">Traffic Management and Optimization</h2>
+            <p class="project-description">Problem: Traffic congestion in urban areas causing delays and pollution.</p>
+            <p class="project-description">Solution: Create a smart traffic management system that uses real-time data to optimize traffic flow and reduce congestion.</p>
+        </div>
+        <div class="project-card">
+            <h2 class="project-title">Renewable Energy Integration</h2>
+            <p class="project-description">Problem: Limited integration of renewable energy sources into the electrical grid.</p>
+            <p class="project-description">Solution: Design and implement a grid-tied renewable energy system (solar, wind, etc.) with energy storage for a reliable and sustainable power supply.</p>
+        </div>
+        <div class="project-card">
+            <h2 class="project-title">Supply Chain Efficiency Improvement</h2>
+            <p class="project-description">Problem: Inefficient supply chain management leading to delays and increased costs..</p>
+            <p class="project-description">Solution: Develop software or tools for optimizing supply chain logistics, inventory management, and demand forecasting.</p>
+        </div>
+        <div class="project-card">
+            <h2 class="project-title">Industrial Automation for Quality Control</h2>
+            <p class="project-description">Problem: Inconsistent product quality in manufacturing processes.</p>
+            <p class="project-description">Solution: Create automated quality control systems using sensors, machine learning, and robotics to enhance product quality and reduce defects.</p>
+        </div>
+        <div class="project-card">
+            <h2 class="project-title">Water Resource Management</h2>
+            <p class="project-description">Problem: Water scarcity and inefficient water usage in agriculture and industry.</p>
+            <p class="project-description">Solution: Develop water management strategies, including efficient irrigation systems and water recycling techniques.</p>
+        </div>
+        <div class="project-card">
+            <h2 class="project-title">Agricultural Technology for Crop Yield Enhancement</h2>
+            <p class="project-description">Problem: Low crop yields due to outdated agricultural practices.</p>
+            <p class="project-description">Solution: Design and implement innovative agricultural technologies, such as precision farming and automated crop monitoring.</p>
+        </div>
+        <div class="project-card">
+            <h2 class="project-title">Medical Device Innovation</h2>
+            <p class="project-description">Problem: Lack of accessible and affordable medical devices for healthcare.</p>
+            <p class="project-description">Solution: Engineer low-cost medical devices, such as diagnostic tools or prosthetics, to improve healthcare accessibility.</p>
+        </div>
+        <!-- <div class="project-card">
+            <h2 class="project-title">Environmental Monitoring and Remediation</h2>
+            <p class="project-description">Problem: Pollution and environmental degradation in sensitive ecosystems.</p>
+            <p class="project-description">Solution: Develop monitoring systems and remediation technologies to address pollution and protect natural habitats.</p>
+        </div> -->
+    </div>
+
+    <script>
+        function redirect_home(){
+            window.location = "industry_login.html";
+        }
+
+        function redirect_project(){
+            window.location = "in.html";
+        }
+
+        function redirect_help(){
+            window.location = "help.html";
+        }
+
+        function redirect_about(){
+            window.location = "about.html";
+        }
+        function redirect_contact(){
+            window.location = "contactus.html";
+        }
+    </script>
+</body>
+</html>

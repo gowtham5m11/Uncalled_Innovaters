@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Add your stylesheet link here -->
+    <link rel="stylesheet" href="verifyStyle.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-toggle">
+            <section class="toggle">
+                <h3>Don't Have an Account?</h3>
+                <p>Sign up now and get access to fun new features</p>
+                <button class="btn-toggle" type="button">Sign Up</button>
+            </section>
+            <section class="toggle">
+                <h3>Have an Account?</h3>
+                <p>Login and get back into the fun</p>
+                <button class="btn-toggle" type="button">Login</button>
+            </section>
+        </div>
+        <div id="slider">
+            <div class="login-signup">
+                <ul class="dropdown-menu form-wrapper">
+                    <!-- Signup form -->
+                    <form id="signUpForm" action="your_signup_script.php" method="post" onsubmit="return validateSignUpForm()">
+                        <h2>Sign Up</h2>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Username"
+                                required="required"
+                                id="signup-username"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="password"
+                                class="form-control"
+                                placeholder="Password"
+                                required="required"
+                                id="signup-password"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-type">Select type of user:</label>
+                            <input
+                                type="radio"
+                                class="form-control"
+                                value="Student"
+                                required="required"
+                                id="signup-type"
+                                name="type"
+                            >
+                            <label for="student">Student</label>
+                
+                            <input
+                                type="radio"
+                                class="form-control"
+                                value="VerifyTeam"
+                                required="required"
+                                id="signup-type-verify"
+                                name="type"
+                            >
+                            <label for="verifyTeam">Verify Team</label>
+                
+                            <input
+                                type="radio"
+                                class="form-control"
+                                value="Industrial"
+                                required="required"
+                                id="signup-type-industrial"
+                                name="type"
+                            >
+                            <label for="industrial">Industrial</label>
+                        </div>
+                        <input type="submit" class="btn btn-primary btn-block log-btn" value="Sign Up">
+                        <div class="form-footer">
+                            <a href="#">Already have an account? Login here</a>
+                        </div>
+                    </form>
+                </ul>
+                <ul class="dropdown-menu form-wrapper">
+                    <!-- Login form -->
+                    <form id="login-form" action="your_login_script.php" method="post" onsubmit="return validateLoginForm()">
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Username"
+                                required="required"
+                                id="login-username"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="password"
+                                class="form-control"
+                                placeholder="Password"
+                                required="required"
+                                id="login-password"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <label for="signup-type">Select type of user:</label>
+                            <input
+                                type="radio"
+                                class="form-control"
+                                value="Student"
+                                required="required"
+                                id="signup-type"
+                                name="type"
+                            >
+                            <label for="student">Student</label>
+                
+                            <input
+                                type="radio"
+                                class="form-control"
+                                value="VerifyTeam"
+                                required="required"
+                                id="signup-type-verify"
+                                name="type"
+                            >
+                            <label for="verifyTeam">Verify Team</label>
+                
+                            <input
+                                type="radio"
+                                class="form-control"
+                                value="Industrial"
+                                required="required"
+                                id="signup-type-industrial"
+                                name="type"
+                            >
+                            <label for="industrial">Industrial</label>
+                        </div>
+                        <!-- Add your radio inputs for user type here -->
+                        <input type="submit" class="btn btn-primary btn-block log-btn" value="Login">
+                        <div class="form-footer">
+                            <a href="#">Forgot Your password?</a>
+                        </div>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        function toggleSlider() {
+            document.getElementById("slider").classList.toggle("toggled");
+        }
+
+        // Function to validate the login form
+        function validateLoginForm() {
+            var username = document.getElementById("login-username").value;
+            var password = document.getElementById("login-password").value;
+
+            if (username.trim() === "") {
+                alert("Please enter a username.");
+                return false;
+            }
+
+            if (password.trim() === "") {
+                alert("Please enter a password.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Function to validate the sign-up form
+        function validateSignUpForm() {
+            var username = document.getElementById("signup-username").value;
+            var password = document.getElementById("signup-password").value;
+            // Add more form field validations as needed.
+
+            if (username.trim() === "") {
+                alert("Please enter a username.");
+                return false;
+            }
+
+            if (password.trim() === "") {
+                alert("Please enter a password.");
+                return false;
+            }
+
+            return true;
+        }
+
+        // Attach event listeners to the buttons
+        var btnLogin = document.querySelector(".login-toggle .toggle:nth-child(2) .btn-toggle");
+        var btnSignUp = document.querySelector(".login-toggle .toggle:nth-child(1) .btn-toggle");
+
+        btnLogin.addEventListener("click", function () {
+            toggleSlider();
+        });
+
+        btnSignUp.addEventListener("click", function () {
+            toggleSlider();
+        });
+
+        // Attach event listeners to the form submissions
+        var loginForm = document.getElementById("login-form");
+        var signUpForm = document.getElementById("signUpForm");
+
+        loginForm.addEventListener("submit", function (e) {
+            if (!validateLoginForm()) {
+                e.preventDefault(); // Prevent the form from submitting
+            }
+        });
+
+        signUpForm.addEventListener("submit", function (e) {
+            if (!validateSignUpForm()) {
+                e.preventDefault(); // Prevent the form from submitting
+            }
+        });
+    });
+</script>
+
+    </script>
+</body>
+</html>

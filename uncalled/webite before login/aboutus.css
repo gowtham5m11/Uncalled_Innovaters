@@ -1,0 +1,56 @@
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a background color and text styles */
+body {
+    background-image: linear-gradient(to bottom,#cfbcab,#df917c);
+    font-family: Arial, sans-serif;
+   
+}
+
+/* Style the header */
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+/* Style the main content section */
+.about-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15rem;
+}
+
+/* Style the company image */
+.about-image {
+    flex: 1;
+    margin-right: 2rem;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Style the about text */
+.about-text {
+    flex: 2;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: #fff;
+}

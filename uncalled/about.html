@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aboutus.css">
+    <title>About Us</title>
+    <style>
+        /* Apply gradient background to the body */
+        body {
+            background-image: linear-gradient(to bottom, #66D3FA, #2e8b57);
+            margin: 0; /* Remove default margin */
+            display: flex;
+            flex-direction: column; /* Allow the footer to stay at the bottom */
+            min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            height: 69px;
+            padding: 0 20px; /* Added padding to create space around the logo and buttons */
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin-right: 70px;
+        }
+
+        .header-items {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-item button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header-item button:hover {
+            color: #00D4FF;
+        }
+
+        .body {
+            flex-grow: 1; /* Allow the body to take up remaining space */
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+        .card {
+            width: 1090px;
+            height: 654px;
+            border-radius: 20px;
+            padding: 5px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+        }
+
+        .card__content {
+            background: rgb(5, 6, 45);
+            border-radius: 17px;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .body .card .card__content .title h1{
+            color: #fff;
+            text-align: left;
+            position: absolute;
+            margin-top: 7.4%;
+            margin-left: 30%;
+        }
+        .body .card .card__content .title p{
+            color: #fff;
+            text-align: left;
+            position: absolute;
+            margin-top: 12%;
+            margin-left: 30%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1 style="margin-left: -15px;">uncalled force</h1>
+        </div>
+        <div class="header-items">
+            <div class="header-item"><button onclick="redirect_home();">HOME</button></div>
+            <div class="header-item"><button onclick="redirect_project();">projects</button></div>
+            <div class="header-item"><button onclick="redirect_help();">help</button></div>
+            <div class="header-item"><button onclick="redirect_about();">about</button></div>
+            <div class="header-item"><button onclick="redirect_contact();">contact</button></div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="card">
+            <div class="card__content">
+                <div class="title"><h1>About us</h1>
+                <p>We aspire to give students hands on experience with the industries free of cost</p></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Your Company Name</p>
+    </footer>
+</body>
+<script>
+    function redirect_home(){
+        window.location = "industry_login.html";
+    }
+
+    function redirect_project(){
+        window.location = "project.html";
+    }
+
+    function redirect_help(){
+        window.location = "help.html";
+    }
+
+    function redirect_about(){
+        window.location = "about.html";
+    }
+    function redirect_contact(){
+        window.location = "contactus.html";
+    }
+</script>
+</html>

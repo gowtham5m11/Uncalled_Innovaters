@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Solution</title>
+    <link rel="stylesheet" type="text/css" href="gradient.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom,#9600FF, #EEBD89); /* Gradient background */
+            color: #D13ABD; /* Text color */
+        }
+
+        h1 {
+            text-align: center;
+            color: #F6A09A;
+        }
+
+        h3 {
+            text-align: center;
+            color: #FAF5D0;
+        }
+
+        /* Form container */
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add borders to text fields and textarea */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the dropdown select */
+        select {
+            width: 100%;
+            background-image: linear-gradient(to bottom,#EF96C5,#EEBD89);
+            border: 1px solid #ccc;
+            color: white;
+            padding: 10px;
+            border-radius: 9px;
+        }
+
+        /* Style for the dropdown options */
+        select option {
+            background-color: #EF96C5;
+            color: white;
+        }
+
+        /* File input style */
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Submit button style */
+        input[type="submit"] {
+            background-color: #9600FF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Important guidelines */
+        .important-guidelines {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Your Solution</h1>
+    <h3 >Select your department for problem statements:</h3>
+    <div class="form-container">
+        <form>
+            <label for="branch">Choose a branch:</label>
+            <select id="branch" name="branchs">
+                <option value="Computers">Computers</option>
+                <option value="Mechanials">Mechanicals</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Civil">Civil</option>
+                <option value="Chemical">Chemicals</option>
+                <option value="Others">Others</option>
+            </select><br>
+            <br>
+
+            <label for="problemID">Problem ID:</label>
+            <input type="text" id="problemID" name="problemID" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="9" required></textarea>
+
+            <label for="document">Attach Document:</label>
+            <input type="file" id="document" name="document">
+
+            <center><input type="submit" value="Submit"></center>
+        </form>
+    </div>
+
+    <div class="important-guidelines">
+        <h4>IMPORTANT GUIDELINES:</h4>
+        <p>* The solution should be provided elaborately.</p>
+        <p>* Please provide a related document or image with your solution.</p>
+        <p>NOTE: FOLLOWING THESE GUIDELINES WILL INCREASE THE CHANCES OF YOUR SOLUTION BEING SELECTED</p>
+    </div>
+</body>
+</html>

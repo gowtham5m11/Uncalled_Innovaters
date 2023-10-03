@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <style>
+        /* Add your project page styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient( #66D3FA, #2e8b57);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            height: 808px;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            height: 30px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin-right: 70px;
+        }
+
+        .header-items {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-item button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header-item button:hover {
+            color: #00D4FF;
+        }
+        .card {
+            position: absolute;
+            top :25%;
+            left: 35%;
+  width: 400px;
+  height: 400px;
+  transition: all 0.2s;
+  position: relative;
+  cursor: pointer;
+}
+
+.card-inner {
+  width: inherit;
+  height: inherit;
+  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.card:hover {
+  transform: scale(1.04) rotate(1deg);
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: rgb(250,245,208);
+background: radial-gradient(circle, rgba(250,245,208,1) 0%, rgba(136,198,25,1) 35%, rgba(0,212,255,1) 100%);
+  border-radius: 50%;
+  position: absolute;
+  animation: move-up6 2s ease-in infinite alternate-reverse;
+}
+
+.circle:nth-child(1) {
+  top: -25px;
+  left: -25px;
+}
+
+.circle:nth-child(2) {
+  bottom: -25px;
+  right: -25px;
+  animation-name: move-down1;
+}
+
+@keyframes move-up6 {
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes move-down1 {
+  to {
+    transform: translateY(10px);
+  }
+}
+.container{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    font-size: larger;
+    text-align: center;
+    align-items: center;
+}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Uncalled Force</h1>
+        </div>
+        <div class="header-items">
+            <div class="header-item"><button onclick="redirect_home();">HOME</button></div>
+            <div class="header-item"><button onclick="redirect_project();">projects</button></div>
+            <div class="header-item"><button onclick="redirect_help();">help</button></div>
+            <div class="header-item"><button onclick="redirect_about();">about</button></div>
+            <div class="header-item"><button onclick="redirect_contact();">contact</button></div>
+        </div>
+    </header>
+    <div class="card">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="card-inner"> <div class="container">
+            <h1>Contact Us</h1>
+            <a href="mailto:polisettipardhu23@gmail.com" class="email-button">Email Us</a>
+            <h3>Contact number:</h3>
+            <h3>+91-9550 314 022</h3>
+        </div></div>
+    </div>
+    <script>
+        function redirect_home(){
+            window.location = "industry_login.html";
+        }
+
+        function redirect_project(){
+            window.location = "project.html";
+        }
+
+        function redirect_help(){
+            window.location = "help.html";
+        }
+
+        function redirect_about(){
+            window.location = "about.html";
+        }
+        function redirect_contact(){
+            window.location = "contactus.html";
+        }
+    </script>
+</body>
+</html>
