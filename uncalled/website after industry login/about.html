@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aboutus.css">
+    <title>About Us</title>
+    <style>
+        /* Apply gradient background to the body */
+        body {
+            background-image: linear-gradient(to bottom, #66D3FA, #2e8b57);
+            margin: 0; /* Remove default margin */
+            display: flex;
+            flex-direction: column; /* Allow the footer to stay at the bottom */
+            min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            height: 69px;
+            padding: 0 20px; /* Added padding to create space around the logo and buttons */
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin-right: 70px;
+        }
+
+        .header-items {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-item button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header-item button:hover {
+            color: #00D4FF;
+        }
+
+        .body {
+            flex-grow: 1; /* Allow the body to take up remaining space */
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+        .card {
+            width: 1090px;
+            height: 654px;
+            border-radius: 20px;
+            padding: 5px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+            box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+        }
+
+        .card__content {
+            background: rgb(5, 6, 45);
+            border-radius: 17px;
+            width: 100%;
+            height: 100%;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .body .card .card__content .title h1{
+            color: #fff;
+            text-align: left;
+            position: absolute;
+            margin-top: 7.4%;
+            margin-left: 40%;
+        }
+        .body .card .card__content .title p{
+            /* color: #fff;
+            text-align: left; */
+            position: absolute;
+            margin-top: 12%;
+            margin-left: 30%;
+        }
+        .body .card .card__content .card-text p{
+            color: #fff;
+            min-width: 500px;
+            position: absolute;
+        }
+        .body .card .card__content .card-text{
+            align-items: center;
+            gap: 50px;
+            position: absolute;
+            top: 10%;
+            left: 53%;
+            color: #fff;
+            text-align: left;
+            max-width: 50%;
+        }
+        .paragraph {
+            flex: 1; /* Distribute available space equally among paragraphs */
+            padding-top: 69px; /* Add padding between paragraphs */
+        }
+        .card-logo{
+
+            position: absolute;
+            top: 20% ;
+            left: 15%;
+        }
+        .card-logo img{
+            width: 100%;
+            height: 100%;
+        }
+        .paragraph-1{
+            position: absolute;
+            top: 150px;
+        }
+        .paragraph-2{
+            position: absolute;
+            top: 230px;
+        }
+        .paragraph-3{
+            position: absolute;
+            top: 310px;
+        }
+        .paragraph-4{
+            position: absolute;
+            top: 390px;
+        }
+        .paragraph-5{
+            position: absolute;
+            top: 470px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1 style="margin-left: -15px;">Uncalled Innovators</h1>
+        </div>
+        <div class="header-items">
+            <div class="header-item"><button onclick="redirect_home();">HOME</button></div>
+            <div class="header-item"><button onclick="redirect_project();">PROJECTS</button></div>
+            <div class="header-item"><button onclick="redirect_post();">POST</button></div>
+            <div class="header-item"><button onclick="redirect_about();">ABOUT</button></div>
+            <div class="header-item"><button onclick="redirect_contact();">CONTACT</button></div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="card">
+            <div class="card__content">
+                <div class="card-logo">
+                    <img src="uncalled_innovators.jpg" alt="">
+                </div>
+                <div class="title"><h1>About us</h1>
+                </div>
+                    <div class="card-text">
+                        <div class="paragraph-1">
+                            <p> Education should not be a luxury. uncalled innovators is committed to providing affordable and accessible educational resources so that anyone with a desire to learn can access the tools they need to succeed</p>
+                        </div>
+                        <div class="paragraph-2">
+                            <p> "In a rapidly changing world, hands-on experience is essential. UNCALLED INNOVATORS connects learners, offering a diverse range of practical knowlwdge that transcend borders and foster a deeper understanding of the world."</p>
+                        </div>
+                        <div class="paragraph-3">
+                            <p>At UNCALLED INNOVATORS, we view practical experience as a communal experience. Our platform is designed to facilitate collaboration, discussion, and knowledge-sharing among learners, teachers, and experts. Together, we can learn and grow.</p>
+                        </div>
+                        <div class="paragraph-4">
+                            <p>Education is a dynamic field, and we are committed to continuous improvement. UNCALLED INNOVATORS regularly updates and enhances our content and features to stay at the forefront of educational innovation</p>
+                        </div>
+                        <div class="paragraph-5">
+                            <p>Join our thriving learning community, where you can engage and collaborate on projects with fellow learners and educators who share your passions."</p>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Your Company Name</p>
+    </footer>
+</body>
+<script>
+    function redirect_home(){
+        window.location = "industry_login.html";
+    }
+
+    function redirect_project(){
+        window.location = "project.html";
+    }
+
+    function redirect_post(){
+        window.location = "industry_post.html";
+    }
+
+    function redirect_about(){
+        window.location = "about.html";
+    }
+    function redirect_contact(){
+        window.location = "contactus.html";
+    }
+</script>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat box</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Apply gradient background to the body */
+        body {
+            background-image: linear-gradient(to bottom, #66D3FA, #2e8b57);
+            margin: 0; /* Remove default margin */
+            display: flex;
+            flex-direction: column; /* Allow the footer to stay at the bottom */
+            min-height: 100vh; /* Ensure the content takes at least the full viewport height */
+            height: 100%;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+            height: 69px;
+            padding: 0 20px; /* Added padding to create space around the logo and buttons */
+        }
+
+        .logo {
+            font-size: 55px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin-right: 70px;
+        }
+
+        .header-items {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-item button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header-item button:hover {
+            color: #00D4FF;
+        }
+
+        .body {
+            flex-grow: 1; /* Allow the body to take up remaining space */
+            display: flex;
+            justify-content: center; /* Center the content horizontally */
+            align-items: center; /* Center the content vertically */
+        }
+        .header .signup .signup-button {
+            background-color: transparent;
+            border: none;
+            color: aliceblue;
+            position: absolute;
+            font-size: larger;
+            text-align: center;
+            align-items: center;
+            right: 1%;
+            top: 6.2%;
+        }
+    </style>
+    
+</head>
+<body class="h-screen">
+    <header class="header">
+        <div class="logo">
+            <h1 style="margin-left: -19px;">uncalled force</h1>
+        </div>
+        <div class="header-items">
+            <div class="header-item"><button onclick="redirect_home();">HOME</button></div>
+            <div class="header-item"><button onclick="redirect_project();">projects</button></div>
+            <div class="header-item"><button onclick="redirect_help();">help</button></div>
+            <div class="header-item"><button onclick="redirect_about();">about</button></div>
+            <div class="header-item"><button onclick="redirect_contact();">contact</button></div>
+        </div>
+        <div class="signup">
+            <button type="button" class="signup-button" onclick="redirect_signup();">signup/login</button>
+        </div>
+    </header>
+    <!-- Left Side: Previous Chats -->
+    <div class="w-1/4 bg-blue p-4 border-r border-blue-300">
+        <!-- Previous chat list -->
+        <div class="mb-4">
+            <h2 class="text-xl font-semibold mb-2">Previous Chats</h2>
+            <ul class="divide-y divide-#blue-300">
+                <!-- List of previous chats -->
+                <li class="py-2">
+                    <a href="#" class="block hover:bg-#66D3FA-100 px-2 rounded-md">User 1</a>
+                </li>
+                <li class="py-2">
+                    <a href="#" class="block hover:bg-#66D3FA-100 px-2 rounded-md">User 2</a>
+                </li>
+                <li class="py-2">
+                    <a href="#" class="block hover:bg-#66D3FA-100 px-2 rounded-md">User 3</a>
+                </li>
+                <li class="py-2">
+                    <a href="#" class="block hover:bg-#66D3FA-100 px-2 rounded-md">User 4</a>
+                </li>
+                <li class="py-2">
+                    <a href="#" class="block hover:bg-#66D3FA-100 px-2 rounded-md">User 5</a>
+                </li>
+                <!-- Add more chat contacts as needed -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Right Side: Chat with Selected Profile -->
+    <div class="w-3/4 bg-#66D3FA-100 p-4">
+        <!-- Chat header -->
+        <div class="bg-#2e8b57 p-2 border-b border-#66D3FA-300">
+            <h2 class="text-xl font-semibold">Chat with User</h2>
+        </div>
+       
+        <!-- Chat messages -->
+        <div class="chat-box mt-4 px-2 py-4">
+            <!-- Individual chat messages go here -->
+            <!-- Example message -->
+            <div class="mb-2">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-green-400 rounded-full mr-2"></div> <!-- User profile picture -->
+                    <div class="bg-green-500 text-white px-3 py-2 rounded-lg">
+                        Hello!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chat input -->
+        <div class="mt-4">
+            <input type="text" class="w-full px-3 py-2 border border-blue-300 rounded-md" placeholder="Type your message...">
+        </div> 
+    </div>
+ <script>
+        function redirect_home(){
+            window.location = "industry_login.html";
+        }
+
+        function redirect_project(){
+            window.location = "project.html";
+        }
+
+        function redirect_help(){
+            window.location = "help.html";
+        }
+
+        function redirect_about(){
+            window.location = "about.html";
+        }
+        function redirect_contact(){
+            window.location = "contactus.html";
+        }
+        function redirect_signup(){
+            window.location="../verify.html"
+        }
+    </script>
+</body>
+</html>

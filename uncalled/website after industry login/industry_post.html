@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Indus Form</title>
+    <link rel="stylesheet" type="text/css" href="gradient.css">
+    <style>
+        /* Add your project page styles here */
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient( #66D3FA, #2e8b57);
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            height: 808px;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            height: 30px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin-right: 70px;
+        }
+
+        .header-items {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-item button {
+            background-color: transparent;
+            border: none;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header-item button:hover {
+            color: #00D4FF;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #FFF;
+            padding: 30px;
+            color: #000000;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        textarea,
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            width: 100%;
+            background-image: linear-gradient(to bottom,#9600FF, #EEBD89);
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        /* Style for the dropdown options */
+        select option {
+            background-color: #EEBD89;
+            color: white;
+        }
+
+        input[type="submit"] {
+            background-color: #9600FF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Uncalled Innovators </h1>
+        </div>
+        <div class="header-items">
+            <div class="header-item"><button onclick="redirect_home();">HOME</button></div>
+            <div class="header-item"><button onclick="redirect_project();">PROJECTS</button></div>
+            <div class="header-item"><button onclick="redirect_post();">POST</button></div>
+            <div class="header-item"><button onclick="redirect_about();">ABOUT</button></div>
+            <div class="header-item"><button onclick="redirect_contact();">CONTACT</button></div>
+        </div>
+    </header>
+    <h1 font color="black">Your Problem</h1>
+    <form id="problemForm" enctype="multipart/form-data">
+        <label for="problemID">Problem ID:</label>
+        <input type="text" id="problemID" name="problemID" required>
+
+        <label for="statement">Statement:</label>
+        <textarea id="statement" name="statement" rows="5" cols="50" required></textarea>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" rows="10" cols="90" required></textarea>
+
+        <label for="document">Attach Document:</label>
+        <input type="file" id="document" name="document">
+
+        <center><input type="submit" value="Submit"></center>
+    </form>
+</body>
+<script>
+    function redirect_home(){
+        window.location = "industry_login.html";
+    }
+
+    function redirect_project(){
+        window.location = "project.html";
+    }
+
+    function redirect_post(){
+        window.location = "industry_post.html";
+    }
+
+    function redirect_about(){
+        window.location = "about.html";
+    }
+    function redirect_contact(){
+        window.location = "contactus.html";
+    }
+</script>
+</html>

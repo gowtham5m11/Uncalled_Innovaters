@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Your Solution</title>
+    <link rel="stylesheet" type="text/css" href="gradient.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to bottom,#9600FF, #EEBD89); /* Gradient background */
+        }
+
+        h1 {
+            text-align: center;
+            color: #f8f8f8;
+        }
+
+        h3 {
+            text-align: center;
+            color: #FAF5D0;
+        }
+
+        /* Form container */
+        .form-container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Add borders to text fields and textarea */
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the dropdown select */
+        select {
+            width: 100%;
+            background-image: linear-gradient(to bottom,#EF96C5,#EEBD89);
+            border: 1px solid #ccc;
+            color: rgb(0, 0, 0);
+            padding: 10px;
+            border-radius: 9px;
+        }
+
+        /* Style for the dropdown options */
+        select option {
+            background-color: #EF96C5;
+            color: rgb(0, 0, 0);
+        }
+
+        /* File input style */
+        input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Submit button style */
+        input[type="submit"] {
+            background-color: #9600FF;
+            color: rgb(0, 0, 0);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Important guidelines */
+        .important-guidelines {
+            text-align: center;
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient( #66D3FA, #2e8b57);
+            font-family: 'Poppins', sans-serif;
+            color: #000000;
+            height: 808px;
+        }
+
+        .header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            display: flex;
+            /* justify-content: space-around; */
+            align-items: center;
+            height: 30px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            margin-right: 70px;
+        }
+
+        .header-items {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-item button {
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .header-item button:hover {
+            color: #00D4FF;
+        }
+        .header .signup .signup-button {
+            background-color: transparent;
+            border: none;
+            color: aliceblue;
+            position: absolute;
+            font-size: larger;
+            text-align: center;
+            align-items: center;
+            right: 1%;
+            top: 2%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Uncalled Innovators</h1>
+        </div>
+        <div class="header-items">
+            <div class="header-item"><button onclick="redirect_home();">HOME</button></div>
+            <div class="header-item"><button onclick="redirect_project();">PROBLEMS</button></div>
+            <div class="header-item"><button onclick="redirect_post();">YOUR SOLUTION</button></div>
+            <div class="header-item"><button onclick="redirect_about();">ABOUT</button></div>
+            <div class="header-item"><button onclick="redirect_contact();">CONTACT</button></div>
+        </div>
+        <!-- <div class="signup">
+            <button type="button" class="signup-button" onclick="redirect_signup();">signup/login</button>
+        </div> -->
+    </header>
+    <h1>Your Solution</h1>
+    <h3 >Select your department for problem statements:</h3>
+    <div class="form-container">
+        <form>
+            <!-- <label for="branch">Choose a branch:</label>
+            <select id="branch" name="branchs">
+                <option value="Computers">Computers</option>
+                <option value="Mechanials">Mechanicals</option>
+                <option value="Electrical">Electrical</option>
+                <option value="Civil">Civil</option>
+                <option value="Chemical">Chemicals</option>
+                <option value="Others">Others</option>
+            </select><br> -->
+            <br>
+
+            <label for="problemID">Problem ID:</label>
+            <input type="text" id="problemID" name="problemID" required>
+
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="9" required></textarea>
+
+            <label for="document">Attach Document:</label>
+            <input type="file" id="document" name="document">
+
+            <center><input type="submit" value="Submit"></center>
+        </form>
+    </div>
+
+    <div class="important-guidelines">
+        <h4>IMPORTANT GUIDELINES:</h4>
+        <p>* The solution should be provided elaborately.</p>
+        <p>* Please provide a related document or image with your solution.</p>
+        <p>NOTE: FOLLOWING THESE GUIDELINES WILL INCREASE THE CHANCES OF YOUR SOLUTION BEING SELECTED</p>
+    </div>
+</body>
+<script>
+    function redirect_home(){
+        window.location = "Student_login.html ";
+    }
+
+    function redirect_project(){
+        window.location = "project.html";
+    }
+
+    function redirect_post(){
+        window.location = "student_post.html";
+    }
+
+    function redirect_about(){
+        window.location = "about.html";
+    }
+    function redirect_contact(){
+        window.location = "contactus.html";
+    }
+</script>
+</html>
