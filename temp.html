@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+    
+    <script>
+        let cont =  document.getElementById("container")
+        let paras = document.getElementsByClassName("para");
+        let content = ["hello1","hello2","hello3","hello4","hello5"]
+        for(let i =0;i<content.length;i++){
+            cont.innerHTML += `<p class="para">${content[i]}</p><button onclick="contentChange(this,${i})" class="btn">open</button>`
+        }
+        function contentChange(item,indx){
+            console.log(item.previousSibling)
+            item.previousSibling.innerHTML="ui"
+            item.innerHTML = "hj"
+        }
+    </script>
+</body>
+</html>

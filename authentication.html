@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Webleb</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./assets/css/authentication.css">
+<script src="assets/js/registration.js"></script>
+</head>
+<body>
+	<div class="section">
+		<div class="container">
+			<div class="row full-height justify-content-center">
+				<div class="col-12 text-center align-self-center py-5">
+					<div class="section pb-5 pt-5 pt-sm-2 text-center">
+						<h6 class="mb-0 pb-3"><span>Log In </span><span>Sign Up</span></h6>
+			          	<input class="checkbox" type="checkbox" id="reg-log" name="reg-log"/>
+			          	<label for="reg-log"></label>
+						<div class="card-3d-wrap mx-auto">
+							<div class="card-3d-wrapper">
+								<div class="card-front">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-4 pb-3">Log In</h4>
+											<form action="login.php" method="post">
+                                                <div class="form-group">
+                                                    <input type="email" class="form-style" name="Email" placeholder="Email">
+                                                    <i class="input-icon uil uil-at"></i>
+                                                </div>	
+                                                <div class="form-group mt-2">
+                                                    <input type="password" class="form-style" name="Password" placeholder="Password">
+                                                    <i class="input-icon uil uil-lock-alt"></i>
+                                                </div>
+                                                <div class="form-group mt-2">
+                                                    <select class="form-select form-style" name="Option" aria-label="Default select example">
+                                                        <option selected>Select type of user</option>
+                                                        <option value="1">Student</option>
+                                                        <option value="2">Verify Team</option>
+                                                        <option value="3">Indutsry</option>
+                                                        
+                                                      </select>
+                                                      <i class="input-icon uil-user"></i>
+                                                </div>
+                                                <input type="submit" name="submit" class="btn mt-4" value="Login">
+                                            </form>
+											
+											<!-- <a href="https://www.web-leb.com/code" class="btn mt-4">Login</a> -->
+                    						<p class="mb-0 mt-4 text-center"><a href="https://www.web-leb.com/code" class="link">Forgot your password?</a></p>
+				      					</div>
+			      					</div>
+			      				</div>
+								<div class="card-back" id="class-back">
+									<div class="center-wrap">
+										<div class="section text-center">
+											<h4 class="mb-3 pb-3">Sign Up</h4>
+											<div class="form-group mt-2">
+												<select id="name" class="form-select form-style" aria-label="Default select example">
+													<option selected>Select type of user</option>
+													<option value="student-registration">Student</option>
+													<option value="student-registration">Verify Team</option>
+													<option value="industry-registration">Indutsry</option>
+													
+												  </select>
+												  <i class="input-icon uil-user"></i>
+											</div>
+											<!-- <a href="https://www.web-leb.com/code" class="btn mt-4">Register</a> -->
+                                            <button onclick="openRegistrationForm()" class="btn mt-4">Register</button>
+				      					</div>
+			      					</div>
+			      				</div>
+			      			</div>
+			      		</div>
+			      	</div>
+		      	</div>
+	      	</div>
+	    </div>
+	</div>
+
+    <div class="student-registration" id="student-registration">
+        <form action="sform.php" method="post">
+            <div class="sform mt-2" id="sform">
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" name="fullName" placeholder="Full Name" required>
+                    <i class="input-icon uil uil-user"></i>
+                </div>  
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" name="collegeName" placeholder="College Name" required>
+                    <i class="input-icon uil uil-graduation-cap"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" name="regNo" placeholder="Registration Number" required>
+                    <i class="input-icon uil uil-user"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" name="Stream" placeholder="Stream" required>
+                    <i class="input-icon uil uil-user"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="email" class="form-style" name="Email" placeholder="Email" required>
+                    <i class="input-icon uil uil-at"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="date" class="form-style" name="DOB" placeholder="Date of Birth" required>
+                    <i class="input-icon uil uil-gift"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="password" class="form-style" name="Password" placeholder="Password" required>
+                    <i class="input-icon uil uil-lock-alt"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="password" class="form-style" name="conPassword" placeholder="Confirm Password" required>
+                    <i class="input-icon uil uil-lock-alt"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" name="pnNum" placeholder="Phone Number" required>
+                    <i class="input-icon uil uil-phone-alt"></i>
+                </div>
+    
+                <input type="submit" class="btn mt-4" value="Register">
+                <button onclick="closeRegistrationForm()" class="btn mt-4">Close</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="industry-registration" id="industry-registration">
+        <form action="assets/php/iform.php" method="post">
+            <div class="iform mt-2" id="iform">
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" placeholder="Full Name">
+                    <i class="input-icon uil uil-user"></i>
+                </div>  
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" placeholder="Industry Name">
+                    <i class="input-icon uil uil-user"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" placeholder="Employee Number">
+                    <i class="input-icon uil uil-user"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" placeholder="Employee Role">
+                    <i class="input-icon uil uil-user"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" placeholder="Established Year">
+                    <i class="input-icon uil uil-user"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="email" class="form-style" placeholder="Email">
+                    <i class="input-icon uil uil-at"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="password" class="form-style" placeholder="Password">
+                    <i class="input-icon uil uil-lock-alt"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="password" class="form-style" placeholder="Confirm Password">
+                    <i class="input-icon uil uil-lock-alt"></i>
+                </div>
+    
+                <div class="form-group mt-2">
+                    <input type="text" class="form-style" placeholder="Phone Number">
+                    <i class="input-icon uil uil-phone-alt"></i>
+                </div>
+                <input type="button" class="btn mt-4" value="Register">
+                <button onclick="closeRegistrationForm()" class="btn mt-4">Close</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
